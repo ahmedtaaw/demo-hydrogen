@@ -157,6 +157,7 @@ export function Layout({children}: {children?: React.ReactNode}) {
         <Links />
       </head>
       <body>
+      <h1 className="text-3xl text-[#4d2fd1]">Tailwind works</h1>
         {children}
         <ScrollRestoration nonce={nonce} />
         <Scripts nonce={nonce} />

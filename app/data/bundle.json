@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "variantId": "cam-v4-white", "quantity": 1 },
+    { "variantId": "cam-pan-v3-white", "quantity": 2 },
+    { "variantId": "sense-motion-sensor-default", "quantity": 2 },
+    { "variantId": "sense-hub-default", "quantity": 1 },
+    { "variantId": "microsd-256-default", "quantity": 2 }
+  ],
+  "planId": "cam-unlimited"
+}

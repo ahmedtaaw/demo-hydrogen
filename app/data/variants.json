@@ -1,0 +1,22 @@
+[
+  { "id": "cam-v4-white", "productId": "cam-v4", "label": "White", "color": "#ffffff", "originalPrice": 35.98, "currentPrice": 27.98 },
+  { "id": "cam-v4-grey", "productId": "cam-v4", "label": "Grey", "color": "#9aa0a6", "originalPrice": 35.98, "currentPrice": 27.98 },
+  { "id": "cam-v4-black", "productId": "cam-v4", "label": "Black", "color": "#111827", "originalPrice": 35.98, "currentPrice": 27.98 },
+
+  { "id": "cam-pan-v3-white", "productId": "cam-pan-v3", "label": "White", "color": "#ffffff", "originalPrice": 39.98, "currentPrice": 34.98 },
+  { "id": "cam-pan-v3-black", "productId": "cam-pan-v3", "label": "Black", "color": "#111827", "originalPrice": 39.98, "currentPrice": 34.98 },
+
+  { "id": "cam-floodlight-v2-white", "productId": "cam-floodlight-v2", "label": "White", "color": "#ffffff", "originalPrice": 89.98, "currentPrice": 69.98 },
+  { "id": "cam-floodlight-v2-black", "productId": "cam-floodlight-v2", "label": "Black", "color": "#111827", "originalPrice": 89.98, "currentPrice": 69.98 },
+
+  { "id": "duo-cam-doorbell-default", "productId": "duo-cam-doorbell", "label": "Default", "originalPrice": null, "currentPrice": 69.98 },
+
+  { "id": "battery-cam-pro-white", "productId": "battery-cam-pro", "label": "White", "color": "#ffffff", "originalPrice": null, "currentPrice": 89.98 },
+  { "id": "battery-cam-pro-black", "productId": "battery-cam-pro", "label": "Black", "color": "#111827", "originalPrice": null, "currentPrice": 89.98 },
+
+  { "id": "sense-motion-sensor-default", "productId": "sense-motion-sensor", "label": "Default", "originalPrice": null, "currentPrice": 29.99 },
+
+  { "id": "sense-hub-default", "productId": "sense-hub", "label": "Default", "originalPrice": 29.92, "currentPrice": 0 },
+
+  { "id": "microsd-256-default", "productId": "microsd-256", "label": "Default", "originalPrice": null, "currentPrice": 20.98 }
+]

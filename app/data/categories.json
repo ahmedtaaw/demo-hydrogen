@@ -1,0 +1,5 @@
+[
+  { "id": "cameras", "name": "Cameras" },
+  { "id": "sensors", "name": "Sensors" },
+  { "id": "accessories", "name": "Accessories" }
+]

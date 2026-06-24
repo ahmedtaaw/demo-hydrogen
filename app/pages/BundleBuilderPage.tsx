@@ -8,6 +8,7 @@ import {
   useBuilderState,
 } from '@/features/configurator'
 import { Text } from '@/design-system'
+import { useCatalog } from '@/data/catalog.context'
 
 function BundleBuilder() {
   const { state } = useBuilderState()
@@ -62,9 +63,10 @@ function BundleBuilder() {
 }
 
 export function BundleBuilderPage() {
+    const catalog = useCatalog()
   const firstStep = steps[0]
   return (
-    <BuilderProvider initialSteps={firstStep ? { [firstStep.id]: 'expanded' } : {}}>
+   <BuilderProvider catalog={catalog} initialSteps={firstStep ? { [firstStep.id]: 'expanded' } : {}}>
       <BundleBuilder />
     </BuilderProvider>
   )

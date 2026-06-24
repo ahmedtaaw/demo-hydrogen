@@ -1,4 +1,4 @@
-import { getCategoryProducts } from '@/data'
+import { useCatalog } from '@/data/catalog.context'
 import { Text } from '@/design-system'
 import { useBuilderState } from '@/features/configurator/state'
 import type { CategoryId } from '@/types'
@@ -29,7 +29,8 @@ export function BundleStep({
   nextLabel,
   onNext,
 }: BundleStepProps) {
-  const { state } = useBuilderState()
+ const { state } = useBuilderState()
+  const { getCategoryProducts } = useCatalog()
 
   const products = getCategoryProducts(categoryId)
   const selectedCount = products.filter(

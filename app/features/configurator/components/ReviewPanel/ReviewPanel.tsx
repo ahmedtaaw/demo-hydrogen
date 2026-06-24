@@ -2,14 +2,16 @@ import { plans } from '@/data'
 import { LineItem, PriceDisplay, Text } from '@/design-system'
 import { selectSections, useBuilderDispatch, useBuilderState } from '@/features/configurator/state'
 import { ReviewSection } from '../ReviewSection'
+import { useCatalog } from '@/data/catalog.context'
 
 // Flat-rate shipping shown as a free perk — not a catalog product.
 const SHIPPING_PRICE = 5.99
 
 export function ReviewPanel() {
+  const catalog = useCatalog()
   const { state } = useBuilderState()
   const dispatch = useBuilderDispatch()
-  const sections = selectSections(state)
+const sections = selectSections(state, catalog)
   const plan = state.planId ? plans.find((entry) => entry.id === state.planId) : null
 
   return (

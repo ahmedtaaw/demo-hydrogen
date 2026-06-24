@@ -1,4 +1,4 @@
-import { getProduct, getProductVariants } from '@/data'
+import { useCatalog } from '@/data/catalog.context'
 import {
   Badge,
   Card,
@@ -22,8 +22,9 @@ export interface ProductCardProps {
 }
 
 export function ProductCard({ productId }: ProductCardProps) {
-  const { state } = useBuilderState()
+const { state } = useBuilderState()
   const dispatch = useBuilderDispatch()
+  const { getProduct, getProductVariants } = useCatalog()
 
   const product = getProduct(productId)
   const item = state.items[productId]

@@ -1,22 +1,23 @@
 import { type ReactNode, useMemo, useReducer } from 'react'
-import {
-  BuilderDispatchContext,
-  BuilderStateContext,
-  type BuilderStateValue,
-} from './builderContext'
+import type { Catalog } from '@/data/catalog.context'
+import { BuilderDispatchContext, BuilderStateContext, type BuilderStateValue } from './builderContext'
 import { builderReducer, createInitialState } from './reducer'
 import { selectTotals } from './selectors'
 import type { StepStatus } from './types'
 
 interface BuilderProviderProps {
   children: ReactNode
-  /** Optional initial step open/closed map (the page supplies its flow). */
+  catalog: Catalog
   initialSteps?: Record<string, StepStatus>
 }
 
-export function BuilderProvider({ children, initialSteps }: BuilderProviderProps) {
-  const [state, dispatch] = useReducer(builderReducer, initialSteps ?? {}, createInitialState)
-  const totals = useMemo(() => selectTotals(state), [state])
+export function BuilderProvider({ children, catalog, initialSteps }: BuilderProviderProps) {
+  const [state, dispatch] = useReducer(
+    builderReducer,
+    initialSteps ?? {},
+    (steps) => createInitialState(catalog, steps),
+  )
+  const totals = useMemo(() => selectTotals(state, catalog), [state, catalog])
   const stateValue = useMemo<BuilderStateValue>(() => ({ state, totals }), [state, totals])
 
   return (
